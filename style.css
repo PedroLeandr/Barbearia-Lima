@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Lora", sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --black: #000;
+    --white: #fff;
+    --beje: #E8D3AD;
+    --red: #7D3031;
+    --transparent: transparent;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-image: url("src/header-background.png");
+    background-repeat: repeat;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    
+}
+
+header .headercontent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("src/header-background.png");
+    background-repeat: repeat;
+    color: var(--white);
+    font-size: 15px;
+    width: 100%;
+    font-weight: bold;
+}
+
+header .headerdetails{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-image: url("src/header-details.png");
+    height: 26px;
+}
+
+header .headercontent .logo{
+    width: 60px;
+    height: 60px;
+    background-image: url("src/logo-background.png");
+    background-size: cover;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 1px var(--white);
+    margin: 5px 5px 5px 15px;
+}
+
+header .headercontent .logo img{
+    width: 60px;
+    height: 60px;
+}
+
+header .headercontent nav{
+    display: flex;
+    justify-content: center;
+}
+
+header .headercontent nav ul{
+    display: flex; 
+    justify-content: right;
+    margin: 0px 5px 0px 0px;
+}
+
+header .headercontent nav ul li{
+    cursor: pointer;
+    margin: 7px;
+}
+
+header .headercontent nav ul li a{
+    color: var(--white);
+}
+
+header .headercontent nav ul li .detail{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, var(--transparent) 50%, var(--beje) 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.3s ease;
+}
+
+header .headercontent nav ul li:hover .detail{
+    background-position: -100% 0;
+}
+
+main{
+    background-image: url("src/background.png");
+    background-size: 1050px;
+    background-position: center top;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    width: 1000px;
+    padding: 100px 0px 0px 0px;
+}
+
+main .emptycontent{
+    height: 200px;
+}
+
+main .content{
+    background-image: url("src/container-background.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+
+main .contentdetails{
+    width: 100%;
+    height: 13px;
+    background-image: url("src/content-details.png");
+    background-repeat: repeat;
+}
+
+main .content h2{
+    font-size: 30px;
+    margin: 10px 0px;
+}
