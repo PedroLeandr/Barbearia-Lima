@@ -14,6 +14,11 @@
     --beje: #E8D3AD;
     --red: #7D3031;
     --transparent: transparent;
+    scroll-padding-top: 350px
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body{
@@ -26,6 +31,7 @@ body{
 header{
     position: fixed;
     width: 100%;
+    z-index: 1;
     
 }
 
@@ -36,7 +42,7 @@ header .headercontent{
     background-image: url("src/header-background.png");
     background-repeat: repeat;
     color: var(--white);
-    font-size: 15px;
+    font-size: 13px;
     width: 100%;
     font-weight: bold;
 }
@@ -100,14 +106,25 @@ header .headercontent nav ul li:hover .detail{
     background-position: -100% 0;
 }
 
-main{
-    background-image: url("src/background.png");
-    background-size: 1050px;
-    background-position: center top;
-    background-repeat: repeat;
-    background-attachment: fixed;
+main {
+    position: relative;
     width: 1000px;
-    padding: 100px 0px 0px 0px;
+    padding: 100px 0 0;
+    overflow: hidden; /* Garante que o efeito fique dentro do elemento */
+}
+
+main::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1000px;
+    height: 100vh;
+    background-image: url("src/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 
 main .emptycontent{
@@ -119,7 +136,10 @@ main .content{
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
+    align-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 15px 15px;
 }
 
 main .contentdetails{
@@ -132,4 +152,18 @@ main .contentdetails{
 main .content h2{
     font-size: 30px;
     margin: 10px 0px;
+}
+
+main .content ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+main .content ul li{
+    list-style: circle;
+    text-align: left;
+    margin: 0px 15px;
+    
 }
